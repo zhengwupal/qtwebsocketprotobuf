@@ -1,0 +1,17 @@
+#ifndef QTWEBSOCKETPROTOBUF_H
+#define QTWEBSOCKETPROTOBUF_H
+
+#include "qtwebsocketprotobufglobal.h"
+#include "websocketclient.h"
+#include "websocketserver.h"
+#include "threadedwebsocketserver.h"
+#include "abstractmessageprocessor.h"
+#include "abstractmessagerouter.h"
+#include "message.h"
+#include "protobufmessage.h"
+#include "logger.h"
+#include "messageserializer.h"
+#include "sendresult.h"
+#include "broadcastresult.h"
+
+#endif

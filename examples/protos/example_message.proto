@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package example;
+
+enum MessageType {
+    UNKNOWN = 0;
+    CONNACK = 1;
+    STATUS = 2;
+    ACK = 3;
+    ECHO = 4;
+    GOODBYE = 5;
+    LATENCY_TEST = 6;
+}
+
+message MessageWrapper {
+    MessageType type = 1;
+    string session_id = 2;
+    uint32 message_id = 3;
+    bytes payload = 4;
+}
+
+message ConnAckMessage {
+}
+
+message StatusMessage {
+    enum StatusCode {
+        OK = 0;
+        WARNING = 1;
+        ERROR = 2;
+    }
+    
+    StatusCode code = 1;
+    string message = 2;
+    string details = 3;
+}
+
+message AckMessage {
+    uint32 request_message_id = 1;
+}
+
+message EchoMessage {
+    uint32 request_message_id = 1;
+    string content = 2;
+}
+
+message GoodbyeMessage {
+    string reason = 1;
+}
+
+message LatencyTestMessage {
+    uint32 request_message_id = 1;
+    int64 client_send_timestamp = 2;
+    int64 server_receive_timestamp = 3;
+    int64 server_send_timestamp = 4;
+    bytes data = 5;
+}

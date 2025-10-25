@@ -1,0 +1,16 @@
+CompileFlags:
+  Add:
+    - -std=c++11
+  Remove:
+    - -W*
+    - -w
+Index:
+  Background: Build
+Diagnostics:
+  ClangTidy:
+    Remove:
+      - "*"
+Hover:
+  ShowAKA: Yes
+InlayHints:
+  Enabled: No

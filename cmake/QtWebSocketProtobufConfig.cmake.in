@@ -1,0 +1,17 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(Qt5Core REQUIRED)
+find_dependency(Qt5Network REQUIRED)
+find_dependency(Qt5WebSockets REQUIRED)
+
+include("${CMAKE_CURRENT_LIST_DIR}/QtWebSocketProtobufTargets.cmake")
+
+set_and_check(QtWebSocketProtobuf_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(QtWebSocketProtobuf_LIB_DIR "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
+
+check_required_components(QtWebSocketProtobuf)
+
+message(STATUS "Found QtWebSocketProtobuf @QTWEBSOCKETPROTOBUF_VERSION@")
+message(STATUS "QtWebSocketProtobuf include directory: ${QtWebSocketProtobuf_INCLUDE_DIR}") 

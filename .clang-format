@@ -1,0 +1,132 @@
+# Qt WebSocket Protobuf Project - Clang Format Configuration
+# Based on Qt coding standards and C++11 best practices
+
+# Language and standard
+Language: Cpp
+Standard: c++11
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+AccessModifierOffset: -4
+
+# Column limit
+ColumnLimit: 120
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: true
+AlignTrailingComments: true
+
+# Braces - Qt mixed style: Allman for functions/classes, K&R for control statements
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: false
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: false
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# Break formatting
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakStringLiterals: true
+
+# Class formatting
+CompactNamespaces: false
+ConstructorInitializerIndentWidth: 4
+NamespaceIndentation: None
+Cpp11BracedListStyle: true
+
+# Function formatting
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+BinPackArguments: true
+BinPackParameters: true
+
+# Include formatting
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: '^"(.*)\.h"'
+    Priority: 1
+  - Regex: '^<(.*)\.h>'
+    Priority: 2
+  - Regex: '^"(.*)"'
+    Priority: 3
+  - Regex: '^<(.*)>'
+    Priority: 4
+IncludeIsMainRegex: '(Test)?$'
+IndentPPDirectives: None
+PPIndentWidth: -1
+
+# Line breaks
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# Pointer and reference alignment
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Spaces
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Qt specific formatting
+# Keep Qt signal/slot connections readable
+# Note: AlignAfterOpenBracket and BinPack settings are defined above
+
+# Comments
+ReflowComments: true
+SpacesBeforeTrailingComments: 2
+
+# Preprocessor
+IndentPPDirectives: None
+PPIndentWidth: -1
+
+# Sort includes
+SortIncludes: true
+
+# Class member formatting
+AllowShortCaseLabelsOnASingleLine: false
+
+# Other
+FixNamespaceComments: true
+ForEachMacros:
+  - foreach
+  - Q_FOREACH
+MacroBlockBegin: ''
+MacroBlockEnd: ''

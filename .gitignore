@@ -1,0 +1,13 @@
+# IDE配置文件
+.vscode/
+CMakeLists.txt.user
+
+# 构建目录
+build/
+*.build/
+*.build-debug/
+*.build-release/
+
+# Protobuf生成的文件
+*.pb.cc
+*.pb.h
